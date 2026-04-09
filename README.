@@ -1,0 +1,25 @@
+# DevOps Scripts
+
+A collection of bash scripts that i have built while learning DevOps. Only one week into the journey! :D
+
+## Scripts
+-MultiFileChecker.sh 
+-upgrade.sh
+-upgrade2.sh 
+
+(Basic fast understanding)  These 3 scripts are my latest scripts as of being one week and 3 days in my journey of DevOps. The MultiFIleChecker.sh is exactly as it says but has a demand of 3 files only, of course that can be changed. My upgrade and upgrade 2 are different verions with the same idea of finding like errors or warnings but the upgrade 2 is just slightly better with a timestamp script into it and saves the log report too a file called report.txt it saves all the reports of the script that it has run through with different files, and no overwrite!
+
+## How to use?
+Deeper understanding fully of the script itself.
+
+-MultiFileChecker.sh 
+
+The MultiFileChecker.sh works by giving it a input of exactly 3 files and it checks of the file exists on the system it is being run on, and it will tell you either the file is missing or found.
+
+-upgrade.sh
+-upgrade2.sh
+
+ The two scripts listed above -upgrade.sh and  -upgrade2.sh are basicly the same with finding error logs in files like errors or warnings and will list how many was found or not found both scripts do have a report log called report.txt where it stores reports everytime it gets used and it does not overwrite. Both will say in the start of running the script Input found or not, why because if no input was found it will say so and then stop the whole script before it breaks/crashes. The upgrade2.sh script is almost the same but it gives the report.txt the report log a date of everything because it is a timestamp.
+
+## About
+Built by myself as a self taught DevOps student learning bash scripting. This journey will be an example of you can start with nothing to something amazing, for my case it is DevOps.
