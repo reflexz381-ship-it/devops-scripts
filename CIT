@@ -1,0 +1,35 @@
+#!/bin/bash
+
+critical=0
+
+log_filter() {
+        local cit="$1"
+if [[ "$cit" == *critical* ]]; then
+        echo "Critical found!"
+        ((critical++))
+else
+        echo "CLEAR FOR CRITICAL WARNS!"
+fi
+
+}
+
+if [[ -n "$1" ]]; then
+        echo "Input found!"
+else
+        echo "Input not found!"
+        exit 1
+fi
+
+
+if [[ ! -f "$1" ]]; then
+        echo "File or Log not found!"
+        exit 1
+fi
+
+while read line; do
+        log_filter "$line"
+done < "$1"
+
+echo "Filter done!"
+echo "critical: $critical"
+

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+hello=0
+
+word_scan() {
+        local point="$1"
+if [[ "$point" == *hello* ]]; then
+        echo "Hello word found!"
+        ((hello++))
+else    
+        echo "Clear!"
+fi      
+}
+
+if [[ -n "$1" ]]; then
+        echo "Argument found!"
+else    
+        echo "Argument not found :C"
+        exit 1
+fi      
+
+if [[ ! -f "$1" ]]; then
+        echo "File not found!!!"
+        exit 1
+fi      
+
+while read line; do
+        word_scan "$line"
+done < "$1"
+
+echo "Word count done!"
+echo "hello: $hello"
+
